@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Birthday Date</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="game_board">
+       
+
+        <div>
+            <h1 class="titulo">Game Birthday Date</h1>
+            <button id="startBtn" class="start">Iniciar</button>
+            <p class="timer">Tempo: <span id="timer">0</span> segundos</p>
+        </div>
+        <div>
+            <button id="restartBtn" class="hidden restart">Reiniciar</button>
+            <audio id="bgMusic" src="musica.mp3" loop></audio>
+        </div>
+
+        <img src="./img/clouds_1.png" class="nuvem">
+        <img src="./img/ground_1.png" class="arvores">
+        <img src="./img/ground_2.png" class="arvores_2">
+        <img src="./img/ground_3.png" class="arvores_3">
+        <img src="./img/clouds_2.png" class="nuvem_2">
+        <img src="img/terra_flutuante.png" class="terra_2">
+        <img src="img/bolinha_pixelart.gif" class="bolinha">
+        <img src="img/terra_flutuante.png" class="terra">
+        <img src="img/Vava_pixelart.gif" class="vava">
+        <img src="img/Chefinha.gif" class="chefinha">
+        <img src="./img/Prop_7.png" class="barrel">
+    </div>
+
+    <!-- Modal de PDF (começa oculto) -->
+    <div id="pdfModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div></div>
+                <h2>Parabéns! Você ganhou!</h2>
+                <span class="close-btn" onclick="closePDF()">✖</span>
+            </div>
+            <img id="pdfViewer" src="img/Beige Minimalist Save the Date Calendar Wedding Invitation.png" />
+            
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

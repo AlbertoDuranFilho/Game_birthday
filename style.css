@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game_board{
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid #333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: url(img/sky.png);
+    background-size: cover;
+}
+
+.barrel{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    right: 0;
+    /* animation: barrel-animation 1.5s linear infinite; */
+}
+
+.chefinha{
+    position: absolute;
+    bottom: 0px;
+    width: 220px;
+    transition: bottom 0.3s;
+}
+.bolinha{
+    position: absolute;
+    bottom: 0px;
+    width: 180px;
+    bottom: 300px;
+    right: 430px;
+}
+.vava{
+    position: absolute;
+    bottom: 300px;
+    right: 110px;
+    width: 220px;
+}
+
+.jump {
+    animation: chefinha-jump 500ms ease-out;
+}
+
+.terra{
+    position: absolute;
+    bottom: 240px;
+    right: 100px;
+    height: 100px;
+}
+.terra_2{
+    position: absolute;
+    bottom: 240px;
+    right: 400px;
+    height: 100px;
+}
+
+.nuvem {
+    position: absolute;
+    width: 100%;
+    animation: cloud_animation 15s linear infinite;
+   
+}
+.nuvem_2 {
+    position: absolute;
+    width: 100%;
+    animation: cloud_animation 10s linear infinite;
+   
+}
+
+.arvores{
+    position: absolute;
+    width: 100%;
+}
+.arvores_2{
+    position: absolute;
+    width: 100%;
+}
+.arvores_3{
+    position: absolute;
+    width: 100%;
+}
+
+.start{
+    color: #ffffff;
+    padding: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(0, 182, 15);
+    border-radius: 10px;
+    font-family: 'Press Start 2P', cursive;
+    transition: 150ms;
+    
+
+}
+
+.start:hover{
+    background-color: rgb(2, 128, 12);
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.restart{
+    color: #ffffff;
+    padding: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
+    font-family: 'Press Start 2P', cursive;
+    transition: 150ms;
+}
+
+.restart:hover{
+    background-color: rgb(179, 2, 2);
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.titulo{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 50px;
+    color: #ffffff;
+    
+}
+
+.timer{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    color: #ffffff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#pdfViewer {
+    width: 600px;
+    height: 100%;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    height: 100%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.close-btn {
+   
+    
+    font-size: 24px;
+    cursor: pointer;
+}
+.hidden { display: none; }
+
+@keyframes barrel-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes chefinha-jump {
+    0% {
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+    
+}
+
+@keyframes cloud_animation {
+    from {
+        right: -100%;
+    }
+
+    to {
+        right: 100%;
+    }
+    
+}
